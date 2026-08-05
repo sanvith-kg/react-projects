@@ -1,0 +1,44 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #0F172A;
+  .container {
+    height: 300px;
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1E293B;
+    gap: 20px;
+    .count {
+      h1 {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 40px;
+        font-weight: bolder;
+        color: #F8FAFC;
+      }
+    }
+    .btn {
+      display: flex;
+      gap: 15px;
+      button {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 30px;
+        font-weight: bolder;
+        border-radius: 10px;
+        color: white;
+        background-color: #6366F1;
+        transition: transform 2;
+        cursor: pointer;
+      }
+    }
+  }
+}
+button:hover {
+  transform: scale(1.1);
+}
