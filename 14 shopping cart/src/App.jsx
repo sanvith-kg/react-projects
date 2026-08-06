@@ -26,7 +26,7 @@ const App = () => {
     <div>
       <h1>Items List</h1>
       {products.map((item, i) => {
-        return (  
+        return (
           <div key={i}>
             <p>
               {item.name} - {item.price}$

@@ -27,7 +27,8 @@ const Counter = () => {
         <div className="btn">
           <button onClick={inc}>Increment</button>
           <button onClick={dec}>Decrement</button>
-          <button style={{backgroundColor:"#475569"}} 
+          <button
+            style={{ backgroundColor: "#475569" }}
             onClick={() => {
               setcount(0);
             }}

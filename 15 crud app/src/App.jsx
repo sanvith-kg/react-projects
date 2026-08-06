@@ -3,19 +3,11 @@ import React, { useState } from "react";
 const App = () => {
   const [inp, setinp] = useState("");
   const [cart, setcart] = useState([]);
-  const [editIndex, setEditIndex] = useState(null);
 
   const add = () => {
     if (inp.trim() === "") return;
 
-    if (editIndex !== null) {
-      const newData = [...cart];
-      newData[editIndex] = inp;
-      setcart(newData);
-      // setEditIndex(null);
-    } else {
-      setcart([...cart, inp]);
-    }
+    setcart([...cart, inp]);
     setinp("");
   };
 
@@ -26,18 +18,18 @@ const App = () => {
   };
 
   const edit = (i) => {
-    setinp(cart[i]);
-    setEditIndex(i);
-  };
+    const value = prompt("Edit", cart[i]);
 
+    if (value) {
+      const copy = [...cart];
+      copy[i] = value;
+      setcart(copy);
+    }
+  };
   return (
     <div>
       <input type="text" value={inp} onChange={(e) => setinp(e.target.value)} />
-
-      <button onClick={add}>
-        {editIndex !== null ? "Update Item" : "Add To Cart"}
-      </button>
-
+      <button onClick={add}>Add To Cart</button>
       {cart.map((ele, i) => (
         <div key={i}>
           <h3>
