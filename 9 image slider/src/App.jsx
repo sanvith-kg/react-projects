@@ -14,6 +14,7 @@ const App = () => {
   const prev = () => {
     setindex((index - 1 + images.length) % images.length);
   };
+
   return (
     <div>
       <h1>Slider</h1>

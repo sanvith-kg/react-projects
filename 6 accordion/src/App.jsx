@@ -23,12 +23,7 @@ const App = () => {
       {faq.map((ele, index) => {
         return (
           <div className="card">
-            <h3
-              style={{ cursor: "pointer" }}
-              onClick={() => setopen(open === index ? null : index)}
-            >
-              {ele.question}
-            </h3>
+            <h3 style={{ cursor: "pointer" }}onClick={() => setopen(open === index ? null : index)}>{ele.question}</h3>
             {open === index && <p>{ele.answer}</p>}
           </div>
         );

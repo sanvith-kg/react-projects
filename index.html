@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button class="inc">inc</button>
+  <button class="dec">dec</button>
+  <h1 class="h1">0</h1>
+  <script>
+    let inc=document.querySelector(".inc")
+    let dec=document.querySelector(".dec")
+    let h1=document.querySelector(".h1")
+    
+    inc.addEventListener("click",()=>{
+      h1.innerText=Number(h1.innerText)+1
+    })
+    dec.addEventListener("click",()=>{
+      h1.innerText-=1
+    })
+  </script>
+</body>
+</html>

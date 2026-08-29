@@ -6,7 +6,6 @@ const App = () => {
 
   const add = () => {
     if (inp.trim() === "") return;
-
     setcart([...cart, inp]);
     setinp("");
   };

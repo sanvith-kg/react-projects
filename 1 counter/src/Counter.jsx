@@ -4,14 +4,14 @@ const Counter = () => {
   const [count, setcount] = useState(0);
 
   const inc = () => {
-    setcount(count + 1);
+    setcount((prev) => prev + 1);
     if (count >= 10) {
       alert("Count can't be more than 10...");
       setcount(10);
     }
   };
   const dec = () => {
-    setcount(count - 1);
+    setcount((prev) => prev - 1);
     if (count <= 0) {
       alert("Count can't be less than 0...");
       setcount(0);
